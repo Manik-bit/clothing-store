@@ -1,74 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clothing Store</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="logo">ClothingStore</div>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
 
-    <section class="hero">
-      <h1 class="text-white">Welcome to the Clothing Store</h1>
-      <p class="text-white">Explore the latest fashion trends.</p>
-      <a href="#" class="cta">Shop Now</a>
-    </section>
+    <!-- Navbar -->
+  <nav class="bg-blue-600 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
 
-    <section class="featured">
-      <h2>Featured Collection</h2>
-      <div class="gallery">
-        <div class="gallery-item">
-          <div class="image-container">
-            <img src="shirt.jpg" alt="Shirt" />
-          </div>
-          <div>
-            <p>Stylish Shirt</p>
-            <span>$29.99</span>
-          </div>
+        <!-- Logo (desktop) -->
+        <div class="flex-shrink-0">
+          <a href="/" class="text-2xl font-bold text-white">Startup</a>
         </div>
-        <div class="gallery-item">
-          <div class="image-container">
-            <img src="dress.jpg" alt="Dress" />
-          </div>
-          <div>
-            <p>Elegant Dress</p>
-            <span>$49.99</span>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <div class="image-container">
-            <img src="jacket.jpg" alt="Jacket" />
-          </div>
-          <div>
-            <p>Classic Jacket</p>
-            <span>$79.99</span>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <div class="image-container">
-            <img src="shoes.jpg" alt="Shoes" />
-          </div>
-          <div>
-            <p>Comfortable Shoes</p>
-            <span>$39.99</span>
+
+        <!-- Nav Links (desktop) -->
+        <div class="hidden md:block">
+          <div class="flex space-x-4">
+            <a href="/" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="/about.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+            <a href="/product" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Product</a>
+            <a href="/contact" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+            <a href="/login" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Login</a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <footer>
-      <p>&copy; 2024 Clothing Store. All Rights Reserved.</p>
-    </footer>
-  </body>
+    <!-- Mobile Menu (hidden by default) -->
+    <div class="md:hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="/" class="text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+        <a href="/about.html" class="text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+        <a href="/product" class="text-white block px-3 py-2 rounded-md text-base font-medium">Product</a>
+        <a href="/contact" class="text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        <a href="/login" class="text-white block px-3 py-2 rounded-md text-base font-medium">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner Section -->
+  <section class="bg-blue-600 text-white py-20 text-center">
+    <h1 class="text-4xl font-bold mb-4">Your Business Solution</h1>
+    <p class="text-lg mb-6">Simplify your workflow with our innovative product</p>
+    <a href="#demo" class="bg-yellow-400 text-black py-3 px-6 rounded-lg shadow-lg hover:bg-yellow-500">Get Started</a>
+  </section>
+
+  <!-- Value Propositions Section -->
+  <section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+      <div class="text-center">
+        <div class="text-4xl mb-4 text-blue-600">🔒</div>
+        <h3 class="text-xl font-semibold mb-2">Security First</h3>
+        <p>We prioritize your privacy with top-tier security protocols.</p>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl mb-4 text-blue-600">⚡</div>
+        <h3 class="text-xl font-semibold mb-2">Fast Setup</h3>
+        <p>Get started quickly and effortlessly with a user-friendly interface.</p>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl mb-4 text-blue-600">💡</div>
+        <h3 class="text-xl font-semibold mb-2">Innovative Features</h3>
+        <p>Stay ahead with tools that empower your team.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Video Section -->
+  <section id="demo" class="bg-gray-200 py-12 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Watch Our Demo</h2>
+    <video class="mx-auto" width="80%" controls>
+      <source src="https://www.pexels.com/download/video/31772556/" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="p-12 bg-blue-500 flex justify-center items-center">
+     <div class=" w-10/12 h-[40vh] bg-white shadow-xl rounded-2xl relative overflow-hidden">
+
+    <!-- Slider Wrapper -->
+    <div id="slider" class="flex-grow-1 bg-red-400 flex transition-transform duration-500">
+      
+      <!-- Slide 1 -->
+      <div class="min-w-full px-4 text-center">
+        <p class="text-gray-700 text-lg italic">
+          “Amazing service! It really helped me improve my workflow.”
+        </p>
+        <h3 class="mt-4 font-bold text-gray-900">— John Doe</h3>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="min-w-full px-4 text-center">
+        <p class="text-gray-700 text-lg italic">
+          “Highly professional team. I loved the experience.”
+        </p>
+        <h3 class="mt-4 font-bold text-gray-900">— Priya Sharma</h3>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="min-w-full px-4 text-center">
+        <p class="text-gray-700 text-lg italic">
+          “A perfect solution for my business needs!”
+        </p>
+        <h3 class="mt-4 font-bold text-gray-900">— Michael Lee</h3>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="flex h-[60px] justify-between mt-6 bg-purple-200">
+      <button id="prev"
+        class="px-4 py-2 bg-gray-800 text-white rounded-xl hover:bg-gray-700">Prev</button>
+      <button id="next"
+        class="px-4 py-2 bg-gray-800 text-white rounded-xl hover:bg-gray-700">Next</button>
+    </div>
+
+  </div>
+  </section>
+
+  
+  <script>
+    // Mobile menu toggle functionality
+    const menuButton = document.querySelector('button[aria-controls="mobile-menu"]');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.contains('block');
+      if (isOpen) {
+        mobileMenu.classList.remove('block');
+        mobileMenu.classList.add('hidden');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('block');
+      }
+    });
+  </script>
+
+    <script>
+    const slider = document.getElementById("slider");
+    const totalSlides = slider.children.length;
+    let index = 0;
+
+    function updateSlider() {
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    document.getElementById("next").onclick = () => {
+      index = (index + 1) % totalSlides;
+      updateSlider();
+    };
+
+    document.getElementById("prev").onclick = () => {
+      index = (index - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    };
+  </script>
+
+</body>
 </html>
